@@ -1,0 +1,41 @@
+<!-- rpi-433-emitter -->
+<script type="text/javascript">
+    RED.nodes.registerType('rpi-433-emitter',{
+        category: 'output',
+        color: '#36bec9',
+        defaults: {
+            pin: { value: 17, required: true, validate:RED.validators.number() },
+            pulseLength: { value: 350, required: true, validate:RED.validators.number() }
+        },
+        inputs: 1,
+        outputs: 0,
+        align: 'right',
+        icon: 'bridge.png',
+        label: function() {
+            return this.name || "rpi-433-emitter";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="rpi-433-emitter">
+    <div class="form-row">
+        <label for="node-input-pin">Pin</label>
+        <input type="text" id="node-input-pin">
+    </div>
+    <div class="form-row">
+        <label for="node-input-pulseLength">Pulse Length</label>
+        <input type="text" id="node-input-pulseLength">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="rpi-433-emitter">
+    <p>
+        This node emits a code on the 433 mhz frequency.
+        It wraps the RPI-433 library (https://github.com/eroak/rpi-433)
+    </p>
+    
+    <h3>Input</h3>
+    <p>
+        <code>msg.payload</code> Must be a number that is to be emitted
+    </p>
+</script>
