@@ -26,6 +26,6 @@
     },
     "homepage": "https://github.com/jmc265/node-red-contrib-rpi-433#readme",
     "dependencies": {
-        "rpi-433": "^2.1.0"
+        "rpi-433-v2": "~1.0.3"
     }
 }
