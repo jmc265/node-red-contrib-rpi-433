@@ -5,7 +5,8 @@ module.exports = function (RED) {
         RED.nodes.createNode(this, config);
         var rfEmitter = rpi433.emitter({
             pin: config.pin,
-            pulseLength: config.pulseLength
+            pulseLength: config.pulseLength,
+            protocol: config.protocol
         });
         var node = this;
         node.on("input", function(msg) {

@@ -5,7 +5,8 @@
         color: '#36bec9',
         defaults: {
             pin: { value: 17, required: true, validate:RED.validators.number() },
-            pulseLength: { value: 350, required: true, validate:RED.validators.number() }
+            pulseLength: { value: 350, required: true, validate:RED.validators.number() },
+            protocol: { value: 1, required: true, validate:RED.validators.number() }
         },
         inputs: 1,
         outputs: 0,
@@ -26,12 +27,16 @@
         <label for="node-input-pulseLength">Pulse Length</label>
         <input type="text" id="node-input-pulseLength">
     </div>
+    <div class="form-row">
+        <label for="node-input-protocol">Protocol</label>
+        <input type="text" id="node-input-protocol">
+    </div>
 </script>
 
 <script type="text/x-red" data-help-name="rpi-433-emitter">
     <p>
         This node emits a code on the 433 mhz frequency.
-        It wraps the RPI-433 library (https://github.com/eroak/rpi-433)
+        It wraps the <a href="https://github.com/kjetilhp/rpi-433">rpi-433-v2 library</a>
     </p>
     
     <h3>Input</h3>
