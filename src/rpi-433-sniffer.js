@@ -1,4 +1,4 @@
-var rpi433 = require('rpi-433');
+var rpi433 = require('rpi-433-v2');
 
 module.exports = function (RED) {
     function Rpi433Sniffer(config) {
