@@ -1,4 +1,4 @@
-var rpi433 = require('rpi-433-v2');
+var rpi433 = require('rpi-433-v3');
 
 module.exports = function (RED) {
     function Rpi433Sniffer(config) {
@@ -6,6 +6,7 @@ module.exports = function (RED) {
         var node = this;
         var rfSniffer = rpi433.sniffer({
             pin: config.pin,
+            pulseLength: config.pulseLength,
             debounceDelay: config.debounceDelay
         });
         node.status({ fill: "green", shape: "dot", text: "listening" });

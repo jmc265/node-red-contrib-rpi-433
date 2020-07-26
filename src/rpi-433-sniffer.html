@@ -5,6 +5,7 @@
         color: '#36bec9',
         defaults: {
             pin: { value: 17, required: true, validate:RED.validators.number() },
+            pulseLength: { value: 350, required: true, validate:RED.validators.number() },
             debounceDelay: { value: 500, required: true, validate:RED.validators.number() }
         },
         inputs: 0,
@@ -31,7 +32,7 @@
 <script type="text/x-red" data-help-name="rpi-433-sniffer">
     <p>
         This node listens for codes on the 433 mhz frequency and outputs the code.
-        It wraps the <a href="https://github.com/kjetilhp/rpi-433">rpi-433-v2 library</a>
+        It wraps the <a href="https://github.com/jmc265/rpi-433-v3">rpi-433-v3 library</a>
     </p>
     
     <h3>Output</h3>

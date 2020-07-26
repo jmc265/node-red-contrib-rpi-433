@@ -1,4 +1,4 @@
-var rpi433 = require('rpi-433-v2');
+var rpi433 = require('rpi-433-v3');
 
 module.exports = function (RED) {
     function Rpi433Emitter(config) {
