@@ -5,7 +5,7 @@
         color: '#36bec9',
         defaults: {
             pin: { value: 17, required: true, validate:RED.validators.number() },
-            pulseLength: { value: 350, required: true, validate:RED.validators.number() },
+            pulseLength: { value: 0, required: true, validate:RED.validators.number() },
             debounceDelay: { value: 500, required: true, validate:RED.validators.number() }
         },
         inputs: 0,
@@ -22,6 +22,10 @@
     <div class="form-row">
         <label for="node-input-pin">Pin</label>
         <input type="text" id="node-input-pin">
+    </div>
+    <div class="form-row">
+        <label for="node-input-pulseLength">Pulse Length</label>
+        <input type="text" id="node-input-pulseLength">
     </div>
     <div class="form-row">
         <label for="node-input-debounceDelay">Debounce Delay (ms)</label>
